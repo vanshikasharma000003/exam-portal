@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color:#f8f9fa;">
+
+<div class="container mt-5">
+    <div class="card p-4 shadow-lg">
+        <h2 class="text-center text-primary mb-4">Exam Registration Form</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+            
+            <input class="form-control mb-3" type="text" name="full_name" placeholder="Full Name">
+            <input class="form-control mb-3" type="text" name="course" placeholder="Course">
+            <input class="form-control mb-3" type="number" name="year" placeholder="Year">
+            <textarea class="form-control mb-3" name="address" placeholder="Address"></textarea>
+            <input class="form-control mb-3" type="text" name="phone" placeholder="Phone Number">
+
+            <button class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
